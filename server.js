@@ -7,6 +7,9 @@ require('dotenv/config');
 const app = express();
 app.use(bodyParser.json());
 
+// MiddleWares
+app.use(express.static("./client/build"));
+
 // Import Routes
 const organiserRoute = require('./routes/organiser');
 const memberRoute = require('./routes/member');
